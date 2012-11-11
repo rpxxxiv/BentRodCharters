@@ -19,9 +19,12 @@ namespace FishingGuideSanbox.Controllers
 
         public ActionResult AboutUs()
         {
-            return View();
+            return PartialView();
         }
-
+        public ActionResult HomePage()
+        {
+            return PartialView();
+        }
         public ActionResult GetNavigationLinks()
         {
             NavigationLinkRepository nlr = new NavigationLinkRepository();

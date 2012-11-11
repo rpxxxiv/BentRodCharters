@@ -68,7 +68,7 @@ header, footer, nav, section {
 {
 
     position:absolute;
-    top:50px;
+    top:100px;
     left:250px;
     z-index:100;
     margin:0px;
@@ -81,10 +81,26 @@ header, footer, nav, section {
     
 }
 
+#header
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    padding:0px;
+    margin:0px;
+    width:67%;
+    height:90px;
+    background-image:url('BoatHeaderBRC.png');
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    display:block;
+    z-index:150;
+}
 
 #sideNav
 {
     position:fixed;
+    top:100px;
     left:0;
     width:249px;
     height:100%;

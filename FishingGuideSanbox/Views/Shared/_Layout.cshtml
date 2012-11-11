@@ -10,19 +10,33 @@
     <script type="text/javascript">
         $(window).ready(
             function () {
+
+
+                $('.btnNav').click(function (e) {
+                    e.preventDefault();
+                    var url = $(this).attr('href');
+                    $("#content").fadeOut(500, function () {
+                        $(this).html('');
+                        $(this).load(url);
+                        $(this).fadeIn(500);
+                    });
+
+                });
                 BackgroundAnimate();
-            }
-            );
+            });
 
         function BackgroundAnimate() {
-            $('.bgFade').fadeToggle(500, function () { BackgroundAnimate(); });
+            $('.bgFade').fadeToggle(2000, function () { BackgroundAnimate(); });
         }
 
     </script>
 </head>
 <body>
 
+    <div id="header">
 
+
+    </div>
     <div id="sideNav">
         @{
             Html.RenderAction("GetNavigationLinks", "Home");
@@ -37,8 +51,6 @@
 
     @RenderSection("scripts", required: false)
     <div id="backgroundImage">
-    @*<img id="imgBackground" src="~/Content/WaterBackground.png" height="100%" alt="background" />*@
-        @*<div class="imgBackground"/>*@
         <div class="bgFade"/>
     </div>
 </body>

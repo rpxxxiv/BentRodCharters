@@ -13,7 +13,7 @@ namespace FishingGuideSanbox.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return PartialView();
         }
 
     }
