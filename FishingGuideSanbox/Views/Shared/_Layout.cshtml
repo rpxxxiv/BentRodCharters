@@ -15,7 +15,7 @@
             );
 
         function BackgroundAnimate() {
-            $('.bgFade').fadeToggle(2000, function () { BackgroundAnimate(); });
+            $('.bgFade').fadeToggle(500, function () { BackgroundAnimate(); });
         }
 
     </script>
@@ -28,12 +28,13 @@
             Html.RenderAction("GetNavigationLinks", "Home");
         }
     </div>
-    <div id="content">
-    @RenderBody()
-    </div>
+
+        <div id="content">
+        @RenderBody()
+        </div>
 
 
-    @Scripts.Render("~/bundles/jquery")
+
     @RenderSection("scripts", required: false)
     <div id="backgroundImage">
     @*<img id="imgBackground" src="~/Content/WaterBackground.png" height="100%" alt="background" />*@
