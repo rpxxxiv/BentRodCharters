@@ -5,6 +5,5 @@ D:\Projects\FishingGuideSanbox\Blog\obj\Debug\Blog.dll
 D:\Projects\FishingGuideSanbox\Blog\obj\Debug\Blog.pdb
 D:\Projects\FishingGuideSanbox\BentRodCharters\Blog\bin\Debug\Blog.dll
 D:\Projects\FishingGuideSanbox\BentRodCharters\Blog\bin\Debug\Blog.pdb
-D:\Projects\FishingGuideSanbox\BentRodCharters\Blog\obj\Debug\Blog.csprojResolveAssemblyReference.cache
 D:\Projects\FishingGuideSanbox\BentRodCharters\Blog\obj\Debug\Blog.dll
 D:\Projects\FishingGuideSanbox\BentRodCharters\Blog\obj\Debug\Blog.pdb

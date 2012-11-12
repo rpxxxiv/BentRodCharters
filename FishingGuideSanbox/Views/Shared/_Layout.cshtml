@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
     <script type="text/javascript">
         $(window).ready(
             function () {
@@ -14,7 +16,7 @@
 
                 $('.btnNav').click(function (e) {
                     e.preventDefault();
-                    var url = $(this).attr('href');
+                    var url = $(this).data('href');//$(this).attr('href');
                     $("#content").fadeOut(500, function () {
                         $(this).html('');
                         $(this).load(url);
@@ -42,11 +44,11 @@
             Html.RenderAction("GetNavigationLinks", "Home");
         }
     </div>
-
+    <div id="contentBorder">
         <div id="content">
         @RenderBody()
         </div>
-
+    </div>
 
 
     @RenderSection("scripts", required: false)

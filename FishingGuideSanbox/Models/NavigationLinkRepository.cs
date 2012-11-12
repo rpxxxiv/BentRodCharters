@@ -14,8 +14,8 @@ namespace FishingGuideSanbox.Models
             navLinks.Add(new NavigationLink() { Title = "About Us", View = "AboutUs", ControllerName = "Home" });
             navLinks.Add(new NavigationLink() { Title = "Reserve Charter", View = "Index", ControllerName = "Charter" });
             navLinks.Add(new NavigationLink() { Title = "Blog", View = "Index", ControllerName = "Blog" });
-            navLinks.Add(new NavigationLink() { Title = "Customer Feedback", View = "Index", ControllerName = "UserFeedback" });
-            navLinks.Add(new NavigationLink() { Title = "Gallery", View = "Index", ControllerName = "Content" });
+            navLinks.Add(new NavigationLink() { Title = "Customer Reviews", View = "Index", ControllerName = "UserFeedback" });
+            navLinks.Add(new NavigationLink() { Title = "Gallery", View = "Index", ControllerName = "Gallery" });
             return navLinks;
         }
     }

@@ -1,9 +1,23 @@
 ﻿@model IEnumerable<FishingGuideSanbox.Models.NavigationLink>
 
+<script type="text/javascript">
+    $(window).ready(
+        function () {
+            $("#calendar").datepicker();
+        });
 
+
+</script>
+<style>
+    div.ui-datepicker{
+    font-family:'Modern No. 20','Comic Sans MS',monospace;
+    font-size:12px;}
+
+</style>
 <ul id="nav">
 @foreach (var item in Model) {
-    
-    <li>@Html.ActionLink(item.Title, item.View, new { controller = item.ControllerName }, new { @class = "btnNav" })</li>
+    <li><input type="button" class="btnNav" data-href="@Url.Action(item.View, item.ControllerName)" value="@item.Title" /></li>
 }
+    <li><br /></li>
+    <li><div id="calendar"/></li>
 </ul>

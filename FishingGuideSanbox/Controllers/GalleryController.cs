@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace FishingGuideSanbox.Controllers
 {
-    public class ContentController : Controller
+    public class GalleryController : Controller
     {
         //
         // GET: /Content/
