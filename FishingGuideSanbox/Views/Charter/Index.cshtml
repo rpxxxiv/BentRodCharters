@@ -1,1 +1,24 @@
-﻿<h1>Reserve a Charter</h1>
+﻿
+@Styles.Render("~/Content/themes/base/css")
+@Scripts.Render("~/bundles/jqueryui")
+
+<script type="text/javascript">
+    $(window).ready(function () {
+        $("#charterTabs").tabs();
+    });
+
+</script>
+
+<h1>Reserve a Charter</h1>
+<div id="charterTabs">
+    <ul>
+        <li><a href="#tabs-1">Pick a Charter</a></li>
+        <li><a href="#tabs-2">Choose a Date</a></li>
+        <li><a href="#tabs-3">Customer Info...</a></li>
+        <li><a href="#tabs-4">Make a Reservation</a></li>
+    </ul>
+    <div id="tabs-1"><img src="~/Content/CharterReserve.png" alt="Charter Mock" style="height:50%;width:50%;" /></div>
+    <div id="tabs-2"><img src="~/Content/CharterDateTime.png" alt="Charter Mock" style="height:50%;width:50%;margin-left:20%;" /></div>
+    <div id="tabs-3"><img src="~/Content/CharterReserve.png" alt="Charter Mock" style="height:50%;width:50%;margin-left:40%;" /></div>
+    <div id="tabs-4"><img src="~/Content/CharterReserve.png" alt="Charter Mock" style="height:50%;width:50%;margin-left:60%;" /></div>
+</div>
