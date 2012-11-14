@@ -1,24 +1,76 @@
-﻿
-@Styles.Render("~/Content/themes/base/css")
+﻿@Styles.Render("~/Content/themes/base/css")
 @Scripts.Render("~/bundles/jqueryui")
-
 <script type="text/javascript">
     $(window).ready(function () {
         $("#charterTabs").tabs();
     });
 
 </script>
+<style>
+    #tabContainer
+    {
+        position:absolute;
+        margin:10px;
+        padding:0px;
+        height:95%;
+        width:95%;
+    }
+    #charterTabs
+    {
+        margin:0px;
+    }
+    #tabContent
+    {
+        /*top:0px;
+        left:0px;
+        width:100%;
+        height:95%;
+        margin:20px;
+        padding:0px;
+        overflow-y:auto;
+        overflow-x:hidden;*/
+    }
+    .ui-tabs
+    {
+        margin:0px;
+        height:93%;
+        font-family:'Modern No. 20','Comic Sans MS',monospace;
+        /*overflow-y:auto;
+        overflow-x:hidden;*/
+    }
+    /*.ui-tabs-panel
+    {
+        margin:0px;
+        height:100%;
+        width:100%;
+        overflow-y:auto;
+        overflow-x:hidden;        
+        top:0px;
+        left:0px;
+        width:100%;
+        height:90%;
+        margin:20px;
+        padding:0px;
 
-<h1>Reserve a Charter</h1>
-<div id="charterTabs">
-    <ul>
-        <li><a href="#tabs-1">Pick a Charter</a></li>
-        <li><a href="#tabs-2">Choose a Date</a></li>
-        <li><a href="#tabs-3">Customer Info...</a></li>
-        <li><a href="#tabs-4">Make a Reservation</a></li>
-    </ul>
-    <div id="tabs-1"><img src="~/Content/CharterReserve.png" alt="Charter Mock" style="height:50%;width:50%;" /></div>
-    <div id="tabs-2"><img src="~/Content/CharterDateTime.png" alt="Charter Mock" style="height:50%;width:50%;margin-left:20%;" /></div>
-    <div id="tabs-3"><img src="~/Content/CharterReserve.png" alt="Charter Mock" style="height:50%;width:50%;margin-left:40%;" /></div>
-    <div id="tabs-4"><img src="~/Content/CharterReserve.png" alt="Charter Mock" style="height:50%;width:50%;margin-left:60%;" /></div>
+    }*/
+    .panel
+    {
+        height:100%;
+    }
+</style>
+<div id="tabContainer">
+    <div id="charterTabs">
+        <ul>
+            <li><a href="#tabs-1">Pick a Charter</a></li>
+            <li><a href="#tabs-2">Choose a Date</a></li>
+            <li><a href="#tabs-3">Customer Info...</a></li>
+            <li><a href="#tabs-4">Make a Reservation</a></li>
+        </ul>
+        <div style="max-height:90%;overflow-y:auto;">
+            <div id="tabs-1" class="panel"><img src="~/Content/CharterReserve.png" alt="Charter Mock" style="height:50%;width:50%;" /></div>
+            <div id="tabs-2" class="panel"><img src="~/Content/CharterDateTime.png" alt="Charter Mock" style="height:50%;width:50%;" /></div>
+            <div id="tabs-3" class="panel">@{Html.RenderPartial("CustomerInformation");}</div>
+            <div id="tabs-4" class="panel"><img src="~/Content/CharterReserve.png" alt="Charter Mock" style="height:50%;width:50%;" /></div>
+        </div>
+    </div>
 </div>
